@@ -1,7 +1,10 @@
 import pandas as pd
 import numpy as np
 
-df_athletes = pd.read_csv('athlete_events.csv')
+df_athletes1 = pd.read_csv('athlete_events_1.csv')
+df_athletes2 = pd.read_csv('athlete_events_2.csv')
+df_athletes = pd.concat([df_athletes1, df_athletes2], ignore_index=True)
+
 df_noc = pd.read_csv('noc_regions.csv')
 
 
